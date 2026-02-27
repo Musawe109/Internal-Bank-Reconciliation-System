@@ -1,0 +1,15 @@
+amount,reference,date,description,transaction_type
+100.00,TXN001,2026-02-18,Payment received,Credit
+250.50,TXN002,2026-02-18,Invoice payment,Credit
+500.00,TXN003,2026-02-19,Wire transfer,Debit
+750.25,TXN004,2026-02-19,Direct deposit,Credit
+1000.00,TXN005,2026-02-20,Check payment,Debit
+1250.75,TXN006,2026-02-20,Electronic transfer,Credit
+2000.00,TXN007,2026-02-18,Refund processed,Debit
+2500.00,TXN008,2026-02-19,Service payment,Credit
+3000.50,TXN009,2026-02-20,Vendor payment,Debit
+5000.00,TXN010,2026-02-20,Customer payment,Credit
+100.50,TXN001,2026-02-18,Payment with variance,Credit
+255.50,TXN002,2026-02-18,Invoice with variance,Credit
+999.00,TXN999,2026-02-19,Unmatched transaction,Debit
+888.00,TXN998,2026-02-20,Another unmatched,Debit

@@ -1,0 +1,45 @@
+"""Database enums for reconciliation system."""
+
+from enum import Enum
+
+
+class WorkflowState(str, Enum):
+    """Workflow state machine states."""
+
+    DRAFT = "DRAFT"
+    PROCESSING = "PROCESSING"
+    PENDING_APPROVAL = "PENDING_APPROVAL"
+    APPROVED = "APPROVED"
+    REJECTED = "REJECTED"
+
+
+class Classification(str, Enum):
+    """Transaction classification types."""
+
+    MATCHED = "MATCHED"
+    UNMATCHED_BANK_ONLY = "UNMATCHED_BANK_ONLY"
+    UNMATCHED_INTERNAL_ONLY = "UNMATCHED_INTERNAL_ONLY"
+    VARIANCE_DETECTED = "VARIANCE_DETECTED"
+
+
+class AuditActionType(str, Enum):
+    """Audit log action types."""
+
+    RECONCILIATION_CREATED = "RECONCILIATION_CREATED"
+    CSV_UPLOADED = "CSV_UPLOADED"
+    RECONCILIATION_STARTED = "RECONCILIATION_STARTED"
+    RECONCILIATION_COMPLETED = "RECONCILIATION_COMPLETED"
+    CLASSIFICATION_OVERRIDDEN = "CLASSIFICATION_OVERRIDDEN"
+    WORKFLOW_STATE_CHANGED = "WORKFLOW_STATE_CHANGED"
+    RECORD_APPROVED = "RECORD_APPROVED"
+    RECORD_REJECTED = "RECORD_REJECTED"
+    AUDIT_LOG_VIEWED = "AUDIT_LOG_VIEWED"
+
+
+class AuditEntityType(str, Enum):
+    """Audit log entity types."""
+
+    RECONCILIATION = "RECONCILIATION"
+    TRANSACTION = "TRANSACTION"
+    BATCH_UPLOAD = "BATCH_UPLOAD"
+    WORKFLOW = "WORKFLOW"
